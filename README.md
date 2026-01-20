@@ -1,18 +1,20 @@
-# THEOREM REPO — <SHORT TITLE> (v1)
+# VIREON Theorem Repo Template (v1)
 
-**Status:** T1 / T2 / T3  
-**Tag:** THEOREM / CONJECTURE / PROTOCOL  
-**Scope:** <assumptions / domain / definitions>
+**Status:** PROTOCOL (T1)  
+**Tag:** PROTOCOL  
+**Scope:** Standard structure for theorem/proof repos: statement, proof, algorithms, code, and tamper-evident proofpack verification.
 
-## One-line claim
-<one sentence statement>
+## What this repo is
+This is the canonical template used to create one repo per theorem / proof / protocol in the VIREON system.
 
-## What to read
-- `THEOREM.md` — statement + definitions
-- `PROOF.md` — full proof (no gaps)
-- `ALGO/` — algorithms (if any)
-- `CODE/` — verifier / experiments
-- `PROOFPACK/` — manifest + outputs (tamper-evident)
+## Contents
+- `THEOREM.md` — required claim metadata: statement, assumptions, definitions, falsification target
+- `PROOF.md` — proof skeleton (or protocol rationale) with explicit steps
+- `ALGO/` — algorithms and update rules (if any)
+- `CODE/` — verifier / experiments (deterministic preferred)
+- `PROOFPACK/` — tamper-evident artifact layer (manifest + outputs)
+- `tools/` — manifest creation + verification tools
+- `.github/workflows/` — CI verification
 
 ## Verify (CI-grade)
 This repo is self-verifying via `PROOFPACK/MANIFEST.json`.
