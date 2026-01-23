@@ -25,4 +25,4 @@ This repo is self-verifying via `PROOFPACK/MANIFEST.json`.
   - `python tools/make_manifest.py`
 
 ## Credits
-**Origin:** The Architects (VIREON)
+**Origin:** Inkwon Song Jr. (Creator of VIREON)
