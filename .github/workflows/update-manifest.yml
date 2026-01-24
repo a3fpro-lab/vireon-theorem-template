@@ -11,15 +11,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
       - name: Rebuild manifest
         run: python tools/make_manifest.py
+
       - name: Commit manifest
         run: |
           git config user.name "vireon-bot"
           git config user.email "actions@users.noreply.github.com"
           git add PROOFPACK/MANIFEST.json
-          git commit -m "Update proofpack manifest" || exit 0
+          git commit -m "Update proofpack manifest" || echo "No changes to commit"
           git push
